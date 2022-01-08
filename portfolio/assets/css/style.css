@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
 
-.header-wrapper {
+/* .header-wrapper {
   outline: 2px dotted #999; 
   outline-offset: -2px;
-}
+} */
 
 
 * {
@@ -30,13 +30,6 @@ body {
   justify-content: space-between;
 }
 
-.container {
-  width: 1440px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0 auto;
-}
-
 a {
   text-decoration: none;
   color: white;
@@ -44,30 +37,76 @@ a {
 
 h1 {
   font-family: 'Merriweather', serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 120px;
+}
+
+p {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.button {
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  background-color: #bdae82;
+  width: 220px;
+  height: 55px;
+}
+
+.button:hover{
+  color: white;
+}
+
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /*   HEAD   */
+
+.container-bg {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
 .header-wrapper {
   display: flex;
   justify-content: space-between;
 }
 
+.logo { /* TODO Сделать логотип иконкой */
+  margin: 20px 0px 0px 0px;
+}
+
+
+.logo:hover {
+  filter: invert(21%) sepia(13%) saturate(734%) hue-rotate(7deg) brightness(87%) contrast(89%);
+  /* transition: 1s; */
+}
+
 .navigation-list {
   list-style: none;
   display: inline-flex;
-  
+  margin-left: auto;
 }
 
-.nav-list {
-  padding: 20px 15px 20px 15px;
-  transition: .3s;
+.navigation-list li {
+  padding: 0px 15px 0px 15px;
 }
 
 a:hover {
   color: #bdae82;
 }
-
 
 .switch-lng {
   font-family: Inter;
@@ -77,8 +116,111 @@ a:hover {
   line-height: 50px;
 }
 
-.logo {
-  align-self: flex-start;
+.header {
+  background: url('/portfolio/assets/img/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center 0;
 }
 
+/*   MAIN HERO   */
+
+.container-bg {
+  background: url('/portfolio/assets/img/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center -90px;
+}
+
+.section-hero {
+  height: 820px;
+  padding-top: 160px;
+  padding-left: 60px;
+  padding-right: 840px;
+  padding-bottom: 330px;
+}
+
+h1 {
+  margin: 0px;
+}
+
+.section-hero p {
+  margin: 10px 0px 50px 0px;
+}
+
+/*   SKILLS   */
+
+h2 {
+  margin: 0;
+  color: #bdae82;
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+h2:after, h2:before {
+  content: '';
+  width: 275px;
+  height: 2px;
+  background: #bdae82;
+  margin: 0 20px;
+}
+
+.section-skills {
+  padding-top: 100px;
+}
+
+.skills-item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+.skills-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.skills-item:nth-child(1) {
+  background-image: url('/portfolio/assets/svg/camera.svg');
+  background-size: 62px 50px;
+}
+
+.skills-item:nth-child(2) {
+  background-image: url('/portfolio/assets/svg/video.svg');
+  background-size: 62px 50px;
+}
+
+.skills-item:nth-child(3) {
+  background-image: url('/portfolio/assets/svg/retouch.svg');
+  background-size: 62px 50px;
+}
+
+.skills-item:nth-child(4) {
+  background-image: url('/portfolio/assets/svg/audio.svg');
+  background-size: 62px 50px;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  line-height: 40px;
+  margin: 100px 0px 20px 0px;
+}
+
+.skills-item p {
+  font-size: 18px;
+  text-align: center;
+  line-height: 36px;
+  margin: 0;
+}
 
