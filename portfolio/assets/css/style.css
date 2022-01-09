@@ -148,7 +148,7 @@ h1 {
 
 /*   SKILLS   */
 
-h2 {
+.section-title /* h2 */ {
   margin: 0;
   color: #bdae82;
   font-family: Merriweather;
@@ -162,7 +162,7 @@ h2 {
   padding-bottom: 60px;
 }
 
-h2:after, h2:before {
+.section-title:after, .section-title:before {
   content: '';
   width: 275px;
   height: 2px;
@@ -224,3 +224,168 @@ h3 {
   margin: 0;
 }
 
+  /* PORTFOLIO */  
+
+.section-portfolio {
+  padding-top: 100px;
+}
+
+.portfolio-btn {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding-bottom: 60px;
+}
+
+.button-alt {
+  border: 2px solid #bdae82;
+  cursor: pointer;
+  font-family: inherit;
+  background-color: #000000;
+  color: #bdae82;
+  width: 220px;
+  height: 55px;
+}
+
+.button-alt:hover {
+  color: white;
+}
+
+.portfolio-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+/*   VIDEO   */
+
+.section-video {
+  padding-top: 100px;
+}
+
+.video-player {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-btn {
+  position: absolute;
+}
+
+/*   PRICE   */
+
+.section-price {
+  padding-top: 100px;
+/*   TODO сделать универсальный отталкиватель h2
+ */}
+
+.price-items {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.price-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border: 3px solid #bdae82;
+  Width: 450px;
+  Height: 505px;
+}
+
+.price-title {
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 56px;
+  margin: 43px 0px 10px 0px;
+}
+
+.price {
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 48px;
+  color: #BDAE82;
+  margin: 10px 0px 10px 0px;
+}
+
+.price-advantage span {
+  display: block;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 36px;
+}
+
+.price-item .button {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/*   CONTACTS   */
+
+.section-contacts {
+  margin-top: 100px;
+  height: 700px;
+
+}
+
+.contacts-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contacts-container {
+  background: url('/portfolio/assets/img/contacts-bg.jpg');
+  background-size: auto 700px;
+  background-position: center center;
+}
+
+.contacts-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.contacts-title {
+  margin: 0;
+  color: #bdae82;
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 80px;
+  padding-bottom: 20px;
+  padding-top: 60px;
+  margin-right: 223px;   /* TODO пофиксить костыль, позиция заголовка */
+}
+
+
+.section-contacts textarea {
+  resize: none;
+  height: 100px;
+  margin-bottom: 10px;
+}
+.contacts-input {
+  border: 2px solid #bdae82;
+  background-color: rgba(000, 000, 000, 0.5);
+  width: 450px;
+  color: white;
+  height: 50px;
+}
+
+.contacts-input::placeholder {
+  font-family: inherit;
+  color: #bdae82;
+  font-size: 20px;
+}
