@@ -18,10 +18,11 @@ html {
 body {
   font-family: 'Inter', sans-serif;
   font-size: 20px;
-  color: white;
+  font-family: Inter;
   font-style: normal;
   font-weight: normal;
-  line-height: 50px;
+  line-height: 40px;
+  color: white;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -31,6 +32,11 @@ body {
 a {
   text-decoration: none;
   color: white;
+  line-height: 50px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
 }
 
 h1 {
@@ -56,6 +62,8 @@ p {
   background-color: var(--main-color);
   width: 220px;
   height: 55px;
+  font-size: 20px;
+  line-height: 40px;
 }
 
 .button:hover{
@@ -83,7 +91,7 @@ p {
 }
 
 .logo {
-  margin: 20px 0px 0px 0px;
+  margin: 25px 0px 0px 0px;
   width: 50px;
   height: 40px;
   background-image: url('/portfolio/assets/svg/logo.svg');
@@ -161,7 +169,7 @@ h1 {
 }
 
 .section-hero p {
-  margin: 10px 0px 50px 0px;
+  margin: 10px 0px 25px 0px;
 }
 
 /*   SKILLS   */
@@ -182,7 +190,7 @@ h1 {
 
 .section-title:after, .section-title:before {
   content: '';
-  width: 275px;
+  width: 275px; /* TODO пофиксить длину полосок */
   height: 2px;
   background: var(--main-color);
   margin: 0 20px;
@@ -196,7 +204,6 @@ h1 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
 }
 
 .skills-item {
@@ -214,17 +221,17 @@ h1 {
 
 .skills-item:nth-child(2) {
   background-image: url('/portfolio/assets/svg/video.svg');
-  background-size: 62px 50px;
+  background-size: 60px 50px;
 }
 
 .skills-item:nth-child(3) {
   background-image: url('/portfolio/assets/svg/retouch.svg');
-  background-size: 62px 50px;
+  background-size: 66px 50px;
 }
 
 .skills-item:nth-child(4) {
   background-image: url('/portfolio/assets/svg/audio.svg');
-  background-size: 62px 50px;
+  background-size: 32px 50px;
 }
 
 h3 {
@@ -239,7 +246,7 @@ h3 {
   font-size: 18px;
   text-align: center;
   line-height: 36px;
-  margin: 0;
+  margin: 0 20px 8px 20px;
 }
 
   /* PORTFOLIO */  
@@ -253,6 +260,8 @@ h3 {
   justify-content: center;
   gap: 5px;
   padding-bottom: 60px;
+  font-size: 20px;
+  line-height: 40px;
 }
 
 .button-alt {
@@ -263,6 +272,8 @@ h3 {
   color: var(--main-color);
   width: 220px;
   height: 55px;
+  font-size: 20px;
+  line-height: 40px;
 }
 
 .button-alt:hover {
@@ -336,7 +347,7 @@ h3 {
   font-size: 24px;
   line-height: 48px;
   color: var(--main-color);
-  margin: 10px 0px 10px 0px;
+  margin: 10px 0px 20px 0px;
 }
 
 .price-advantage span {
@@ -410,8 +421,9 @@ h3 {
 .contacts-input::placeholder {
   font-family: inherit;
   color: var(--main-color);
-  font-size: 20px;
   padding: 5px 0px 5px 20px;
+  font-size: 20px;
+  line-height: 40px;
 }
 
 textarea:focus, input:focus{
@@ -442,7 +454,7 @@ footer {
   display: flex;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 9px 0 9px 0;
   gap: 20px;
 }
 
