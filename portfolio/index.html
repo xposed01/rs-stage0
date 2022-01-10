@@ -14,8 +14,9 @@
   <header class="header">
     <div class="container">
       <div class="header-wrapper">
-        <img src="assets/svg/logo.svg" alt="logo" width="50" height="40" class="logo">
-        <nav class="navigation">
+        <div class="logo"></div>
+<!--         <img src="assets/svg/logo.svg" alt="logo" width="50" height="40" class="logo">
+ -->        <nav class="navigation">
           <ul class="navigation-list">
             <li><a href="#skills">Skills</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
@@ -23,8 +24,15 @@
             <li><a href="#price">Price</a></li>
             <li><a href="#contacts">Contacts</a></li>
           </ul>
-          <span class="switch-lng">
-          <a href="#">en</a> / <a href="#">ru</a></span>
+          <div class="switch-lng">
+              <input id="english" type="radio" name="radio" value="english" checked>
+              <label for="english">en</label>
+              <span>/</span>
+              <input id="russian" type="radio" name="radio" value="russian">
+              <label for="russian">ru</label>
+            </div>
+          </div>
+          </div>
         </nav>
       </div>
     </div>
@@ -149,18 +157,21 @@
 
   <footer>
     <div class="container">
-      <div class="footer-data">
-        <p>(c) 2022</p>
-        <a href="github.io">github</a>
-      </div>
-      <a href="#">Rolling Scopes School</a>
-      <div class="social-list">
-        <ul>
-          <li>Instagram</li>
-          <li>Facebook</li>
-          <li>twitter</li>
-          <li>Pinterest</li>
-        </ul>
+      <div class="footer-wrapper">
+        <div class="footer-data">
+          <span>©</span>
+          <span>2022</span>
+          <span><a href="https://github.com/xposed01">github</a></span>
+        </div>
+        <a href="https://rs.school/">Rolling Scopes School</a>
+        <div class="footer-social">
+          <ul class="footer-social-list">
+            <li><a href=""><img src="/portfolio/assets/svg/inst.svg" alt="instagram"></a></li>
+            <li><a href=""><img src="/portfolio/assets/svg/fb.svg" alt="facebook"></a></li>
+            <li><a href=""><img src="/portfolio/assets/svg/tw.svg" alt="twitter"></a></li>
+            <li><a href=""><img src="/portfolio/assets/svg/pinterest.svg" alt="pinterest"></a></li>
+          </ul>
+        </div>
       </div>
     </div>
 

@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
 
-/* .header-wrapper {
-  outline: 2px dotted #999; 
-  outline-offset: -2px;
-} */
-
+:root {
+  --main-color: #bdae82;
+}
 
 * {
   box-sizing: border-box;
@@ -55,7 +53,7 @@ p {
   border: 0;
   cursor: pointer;
   font-family: inherit;
-  background-color: #bdae82;
+  background-color: var(--main-color);
   width: 220px;
   height: 55px;
 }
@@ -84,20 +82,24 @@ p {
   justify-content: space-between;
 }
 
-.logo { /* TODO Сделать логотип иконкой */
+.logo {
   margin: 20px 0px 0px 0px;
+  width: 50px;
+  height: 40px;
+  background-image: url('/portfolio/assets/svg/logo.svg');
 }
 
 
 .logo:hover {
   filter: invert(21%) sepia(13%) saturate(734%) hue-rotate(7deg) brightness(87%) contrast(89%);
-  /* transition: 1s; */
+  transition: .3s;
 }
 
 .navigation-list {
   list-style: none;
   display: inline-flex;
   margin-left: auto;
+  padding: 0 15px 0 0;
 }
 
 .navigation-list li {
@@ -105,15 +107,31 @@ p {
 }
 
 a:hover {
-  color: #bdae82;
+  color: var(--main-color);
+  transition: .3s;
 }
 
 .switch-lng {
+  display: inline-flex;
+  gap: 8px;
   font-family: Inter;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
   line-height: 50px;
+}
+
+.switch-lng input[type=radio] {
+  display: none;
+}
+
+.switch-lng label {
+	cursor: pointer;
+	user-select: none;
+}
+
+.switch-lng input[type=radio]:checked + label {
+  color: var(--main-color);
 }
 
 .header {
@@ -150,7 +168,7 @@ h1 {
 
 .section-title /* h2 */ {
   margin: 0;
-  color: #bdae82;
+  color: var(--main-color);
   font-family: Merriweather;
   font-style: normal;
   font-weight: bold;
@@ -166,7 +184,7 @@ h1 {
   content: '';
   width: 275px;
   height: 2px;
-  background: #bdae82;
+  background: var(--main-color);
   margin: 0 20px;
 }
 
@@ -238,11 +256,11 @@ h3 {
 }
 
 .button-alt {
-  border: 2px solid #bdae82;
+  border: 2px solid var(--main-color);
   cursor: pointer;
   font-family: inherit;
   background-color: #000000;
-  color: #bdae82;
+  color: var(--main-color);
   width: 220px;
   height: 55px;
 }
@@ -274,6 +292,11 @@ h3 {
   position: absolute;
 }
 
+.video-btn:hover {
+  filter: invert(21%) sepia(13%) saturate(734%) hue-rotate(7deg) brightness(87%) contrast(89%);
+  transition: .3s;
+}
+
 /*   PRICE   */
 
 .section-price {
@@ -292,7 +315,7 @@ h3 {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  border: 3px solid #bdae82;
+  border: 3px solid var(--main-color);
   Width: 450px;
   Height: 505px;
 }
@@ -312,7 +335,7 @@ h3 {
   font-weight: bold;
   font-size: 24px;
   line-height: 48px;
-  color: #BDAE82;
+  color: var(--main-color);
   margin: 10px 0px 10px 0px;
 }
 
@@ -359,7 +382,7 @@ h3 {
 
 .contacts-title {
   margin: 0;
-  color: #bdae82;
+  color: var(--main-color);
   font-family: Merriweather;
   font-style: normal;
   font-weight: bold;
@@ -367,7 +390,7 @@ h3 {
   line-height: 80px;
   padding-bottom: 20px;
   padding-top: 60px;
-  margin-right: 223px;   /* TODO пофиксить костыль, позиция заголовка */
+  padding-right: 223px;   /* TODO пофиксить костыль, позиция заголовка */
 }
 
 
@@ -377,7 +400,7 @@ h3 {
   margin-bottom: 10px;
 }
 .contacts-input {
-  border: 2px solid #bdae82;
+  border: 2px solid var(--main-color);
   background-color: rgba(000, 000, 000, 0.5);
   width: 450px;
   color: white;
@@ -386,6 +409,44 @@ h3 {
 
 .contacts-input::placeholder {
   font-family: inherit;
-  color: #bdae82;
+  color: var(--main-color);
   font-size: 20px;
+  padding: 5px 0px 5px 20px;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+.section-contacts .button {
+  margin-right: 230px;
+}
+
+/*   FOOTER   */
+
+footer {
+  padding-top: 50px;
+  height: 150px;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-data span {
+  margin-right: 20px;
+}
+
+.footer-social-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.footer-social-list li:hover {
+  filter: invert(21%) sepia(13%) saturate(734%) hue-rotate(7deg) brightness(87%) contrast(89%);
+  transition: .3s;
 }
