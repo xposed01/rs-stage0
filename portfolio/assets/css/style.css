@@ -68,6 +68,7 @@ p {
 
 .button:hover{
   color: white;
+  transition: .3s;
 }
 
 
@@ -213,6 +214,7 @@ h1 {
   background-position: center top;
   background-repeat: no-repeat;
 }
+
 
 .skills-item:nth-child(1) {
   background-image: url('/portfolio/assets/svg/camera.svg');
