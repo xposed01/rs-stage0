@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+:root {
+  --main-color: #bdae82;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; 
+}
+
+/*    GLOBAL    */
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 40px;
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  line-height: 50px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+h1 {
+  font-family: 'Merriweather', serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 120px;
+}
+
+p {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.button {
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  background-color: var(--main-color);
+  width: 220px;
+  height: 55px;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.button:hover{
+  color: white;
+  transition: .3s;
+}
+
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/*   HEAD   */
+
+.container-bg {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  margin: 25px 0px 0px 0px;
+  width: 50px;
+  height: 40px;
+  background-image: url('/portfolio/assets/svg/logo.svg');
+}
+
+
+.logo:hover {
+  filter: invert(21%) sepia(13%) saturate(734%) hue-rotate(7deg) brightness(87%) contrast(89%);
+  transition: .3s;
+}
+
+.navigation-list {
+  list-style: none;
+  display: inline-flex;
+  margin-left: auto;
+  padding: 0 15px 0 0;
+}
+
+.navigation-list li {
+  padding: 0px 15px 0px 15px;
+}
+
+a:hover {
+  color: var(--main-color);
+  transition: .3s;
+}
+
+.switch-lng {
+  display: inline-flex;
+  gap: 8px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 50px;
+}
+
+.switch-lng input[type=radio] {
+  display: none;
+}
+
+.switch-lng label {
+	cursor: pointer;
+	user-select: none;
+}
+
+.switch-lng input[type=radio]:checked + label {
+  color: var(--main-color);
+}
+
+.header {
+  background: url('/portfolio/assets/img/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+
+/*   MAIN HERO   */
+
+.container-bg {
+  background: url('/portfolio/assets/img/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center -90px;
+}
+
+.section-hero {
+  height: 820px;
+  padding-top: 160px;
+  padding-left: 60px;
+  padding-right: 840px;
+  padding-bottom: 330px;
+}
+
+h1 {
+  margin: 0px;
+}
+
+.section-hero p {
+  margin: 10px 0px 25px 0px;
+}
+
+/*   SKILLS   */
+
+.section-title /* h2 */ {
+  margin: 0;
+  color: var(--main-color);
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+.section-title:after, .section-title:before {
+  content: '';
+  width: 275px; /* TODO пофиксить длину полосок */
+  height: 2px;
+  background: var(--main-color);
+  margin: 0 20px;
+}
+
+.section-skills {
+  padding-top: 100px;
+}
+
+.skills-item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.skills-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+
+.skills-item:nth-child(1) {
+  background-image: url('/portfolio/assets/svg/camera.svg');
+  background-size: 62px 50px;
+}
+
+.skills-item:nth-child(2) {
+  background-image: url('/portfolio/assets/svg/video.svg');
+  background-size: 60px 50px;
+}
+
+.skills-item:nth-child(3) {
+  background-image: url('/portfolio/assets/svg/retouch.svg');
+  background-size: 66px 50px;
+}
+
+.skills-item:nth-child(4) {
+  background-image: url('/portfolio/assets/svg/audio.svg');
+  background-size: 32px 50px;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  line-height: 40px;
+  margin: 100px 0px 20px 0px;
+}
+
+.skills-item p {
+  font-size: 18px;
+  text-align: center;
+  line-height: 36px;
+  margin: 0 20px 8px 20px;
+}
+
+  /* PORTFOLIO */  
+
+.section-portfolio {
+  padding-top: 100px;
+}
+
+.portfolio-btn {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding-bottom: 60px;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.button-alt {
+  border: 2px solid var(--main-color);
+  cursor: pointer;
+  font-family: inherit;
+  background-color: #000000;
+  color: var(--main-color);
+  width: 220px;
+  height: 55px;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.button-alt:hover {
+  color: white;
+}
+
+.portfolio-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+/*   VIDEO   */
+
+.section-video {
+  padding-top: 100px;
+}
+
+.video-player {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-btn {
+  position: absolute;
+}
+
+.video-btn:hover {
+  filter: invert(21%) sepia(13%) saturate(734%) hue-rotate(7deg) brightness(87%) contrast(89%);
+  transition: .3s;
+}
+
+/*   PRICE   */
+
+.section-price {
+  padding-top: 100px;
+/*   TODO сделать универсальный отталкиватель h2
+ */}
+
+.price-items {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.price-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border: 3px solid var(--main-color);
+  Width: 450px;
+  Height: 505px;
+}
+
+.price-title {
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 56px;
+  margin: 43px 0px 10px 0px;
+}
+
+.price {
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 48px;
+  color: var(--main-color);
+  margin: 10px 0px 20px 0px;
+}
+
+.price-advantage span {
+  display: block;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 36px;
+}
+
+.price-item .button {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/*   CONTACTS   */
+
+.section-contacts {
+  margin-top: 100px;
+  height: 700px;
+
+}
+
+.contacts-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contacts-container {
+  background: url('/portfolio/assets/img/contacts-bg.jpg');
+  background-size: auto 700px;
+  background-position: center center;
+}
+
+.contacts-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.contacts-title {
+  margin: 0;
+  color: var(--main-color);
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 80px;
+  padding-bottom: 20px;
+  padding-top: 60px;
+  padding-right: 223px;   /* TODO пофиксить костыль, позиция заголовка */
+}
+
+
+.section-contacts textarea {
+  resize: none;
+  height: 100px;
+  margin-bottom: 10px;
+}
+.contacts-input {
+  border: 2px solid var(--main-color);
+  background-color: rgba(000, 000, 000, 0.5);
+  width: 450px;
+  color: white;
+  height: 50px;
+}
+
+.contacts-input::placeholder {
+  font-family: inherit;
+  color: var(--main-color);
+  padding: 5px 0px 5px 20px;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+.section-contacts .button {
+  margin-right: 230px;
+}
+
+/*   FOOTER   */
+
+footer {
+  padding-top: 50px;
+  height: 150px;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-data span {
+  margin-right: 20px;
+}
+
+.footer-social-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 9px 0 9px 0;
+  gap: 20px;
+}
+
+.footer-social-list li:hover {
+  filter: invert(21%) sepia(13%) saturate(734%) hue-rotate(7deg) brightness(87%) contrast(89%);
+  transition: .3s;
+}
