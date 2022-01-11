@@ -95,7 +95,7 @@ p {
   margin: 25px 0px 0px 0px;
   width: 50px;
   height: 40px;
-  background-image: url('/portfolio/assets/svg/logo.svg');
+  background-image: url('../svg/logo.svg');
 }
 
 
@@ -144,7 +144,7 @@ a:hover {
 }
 
 .header {
-  background: url('/portfolio/assets/img/bg.jpg');
+  background: url('../../assets/img/bg.jpg');
   background-repeat: no-repeat;
   background-position: center 0;
 }
@@ -152,7 +152,7 @@ a:hover {
 /*   MAIN HERO   */
 
 .container-bg {
-  background: url('/portfolio/assets/img/bg.jpg');
+  background: url('../img/bg.jpg');
   background-repeat: no-repeat;
   background-position: center -90px;
 }
@@ -217,22 +217,22 @@ h1 {
 
 
 .skills-item:nth-child(1) {
-  background-image: url('/portfolio/assets/svg/camera.svg');
+  background-image: url('../svg/camera.svg');
   background-size: 62px 50px;
 }
 
 .skills-item:nth-child(2) {
-  background-image: url('/portfolio/assets/svg/video.svg');
+  background-image: url('../svg/video.svg');
   background-size: 60px 50px;
 }
 
 .skills-item:nth-child(3) {
-  background-image: url('/portfolio/assets/svg/retouch.svg');
+  background-image: url('../svg/retouch.svg');
   background-size: 66px 50px;
 }
 
 .skills-item:nth-child(4) {
-  background-image: url('/portfolio/assets/svg/audio.svg');
+  background-image: url('../svg/audio.svg');
   background-size: 32px 50px;
 }
 
@@ -381,7 +381,7 @@ h3 {
 }
 
 .contacts-container {
-  background: url('/portfolio/assets/img/contacts-bg.jpg');
+  background: url('../img/contacts-bg.jpg');
   background-size: auto 700px;
   background-position: center center;
 }
