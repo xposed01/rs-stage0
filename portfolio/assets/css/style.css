@@ -406,7 +406,6 @@ h3 {
   padding-right: 223px;   /* TODO пофиксить костыль, позиция заголовка */
 }
 
-
 .section-contacts textarea {
   resize: none;
   height: 100px;
@@ -418,18 +417,23 @@ h3 {
   width: 450px;
   color: white;
   height: 50px;
+  padding: 5px 0px 5px 20px;
 }
 
 .contacts-input::placeholder {
   font-family: inherit;
   color: var(--main-color);
-  padding: 5px 0px 5px 20px;
   font-size: 20px;
   line-height: 40px;
 }
 
 textarea:focus, input:focus{
   outline: none;
+}
+
+:focus::-webkit-input-placeholder {
+  color: transparent;
+  transition: .2s;
 }
 
 .section-contacts .button {
