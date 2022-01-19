@@ -15,6 +15,11 @@ html {
 
 /*    GLOBAL    */
 
+.body-wrapper { 
+  min-height: 100%;
+  overflow: hidden;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   font-size: 20px;
@@ -27,6 +32,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+body._lock {
+  overflow: hidden; /*  запрет прокрутки  */
 }
 
 a {
@@ -146,6 +155,106 @@ a:hover {
 .switch-lng input[type=radio]:checked + label {
   color: var(--main-color);
 }
+
+.menu-burger {
+  display: none;
+  z-index: 15;
+  width: 50px;
+  height: 30px;
+  margin: 30px 0 20px 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.menu-burger::before,
+.menu-burger::after,
+.menu-burger span {
+  left: 0;
+  height: 10%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.3s ease 0s;
+  background-color: #fff;
+}
+
+.menu-burger::before,
+.menu-burger::after {
+  content: '';
+}
+
+.menu-burger::before {
+  top: 0;
+}
+.menu-burger::after {
+  bottom: 0;
+}
+
+.menu-burger span {
+  top: 50%;
+  transform: scale(1) translate(0px, -50%);
+}
+
+.menu-burger._active span {
+  transform: scale(0) translate(0px, -50%);
+}
+
+.menu-burger._active::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0px, -50%);
+}
+
+.menu-burger._active::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0px, 50%);
+}
+
+
+@media (max-width: 767px) {
+  .navigation {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(000, 000, 000, 1);
+    top: 0;
+    left: 0;
+    z-index: 10;
+    margin-left: 148px;
+    padding: 134px 0 0 127px;
+    transform: translateX(100%); /* Сдвинул навигацию на 100% ее ширины */
+    transition: .3s all linear;
+  }
+  .navigation-active {
+    transform: translateX(0); /* Анимация выезда */
+  }
+  .blackout-active {
+    position: fixed;
+    background-color: rgba(000, 000, 000, 0.5);
+    width: 100%;
+    height: 100%;
+    transition: .2s all linear;
+  }
+  .navigation-list {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+  .navigation-list li:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  .navigation-list a {
+  font-size: 34.8235px;
+  line-height: 73px;
+  }
+  .switch-lng {
+    margin-left: auto;
+  }
+  .menu-burger {
+    display: block;
+    z-index: 10;
+  }
+}
+
+
 
 .header {
   background: url('../../assets/img/bg.jpg');
@@ -305,12 +414,16 @@ h3 {
 
 .video-btn {
   position: absolute;
+  border: 0;
+  background: rgba(255, 255, 255, 0);
 }
 
 .video-btn:hover {
   filter: invert(21%) sepia(13%) saturate(734%) hue-rotate(7deg) brightness(87%) contrast(89%);
   transition: .3s;
+  cursor: pointer;
 }
+
 
 /*   PRICE   */
 
