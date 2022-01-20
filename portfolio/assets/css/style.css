@@ -251,6 +251,9 @@ a:hover {
   font-size: 34.8235px;
   line-height: 73px;
   }
+  .navigation-list li {
+    padding-left: 0;
+  }
   .switch-lng {
     margin-left: auto;
   }
@@ -258,7 +261,11 @@ a:hover {
     display: block;
     z-index: 10;
   }
+  .switch-lng span {
+    margin: 0 14px 0 10px;
+  }
 }
+
 
 .header {
   background: url('../img/bg.png');
@@ -279,6 +286,7 @@ a:hover {
   height: 820px;
   padding-top: 160px;
   padding-left: 60px;
+  width: 550px;
 }
 
 h1 {
@@ -308,11 +316,13 @@ h1 {
   .section-hero p {
     line-height: 24px;
     margin: 20px 0 60px;
+    padding-right: 254px;
   }
   .section-hero {
-    height: 490px;
-    padding-top: 100px;
+    height: 500px;
+    padding-top: 78px;
     padding-left: 0;
+    width: 650px;
   }
   .header {
     background: url('../img/bg-tablet.png');
@@ -406,10 +416,6 @@ h3 {
 /*  media skills */
 
 @media (max-width: 1243px) {
-.section-skills {
-  padding-top: 80px;
-}
-}
 .section-title:after, .section-title:before {
   content: '';
   width: 115px; /* TODO пофиксить длину полосок */
@@ -418,6 +424,14 @@ h3 {
   width: 50%;
   margin-bottom: 36px;
 }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+  font-size: 32px;
+  line-height: 40px;
+}
+}
 
 @media (max-width: 720px) {
   .skills-item {
@@ -425,6 +439,8 @@ h3 {
     margin-bottom: 36px;
   }
 } 
+
+
 
   /* PORTFOLIO */  
 
