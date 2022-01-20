@@ -405,30 +405,26 @@ h3 {
 
 /*  media skills */
 
-@media (max-width: 768px) {
+@media (max-width: 1243px) {
 .section-skills {
   padding-top: 80px;
+}
 }
 .section-title:after, .section-title:before {
   content: '';
   width: 115px; /* TODO пофиксить длину полосок */
 }
-.skills-item-wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
 .skills-item {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-position: center top;
-  background-repeat: no-repeat;
+  width: 50%;
   margin-bottom: 36px;
-  width: 300px;
-  height: 220px;
 }
-}
+
+@media (max-width: 720px) {
+  .skills-item {
+    width: 100%;
+    margin-bottom: 36px;
+  }
+} 
 
   /* PORTFOLIO */  
 
@@ -467,6 +463,20 @@ h3 {
   gap: 25px;
 }
 
+/* porfolio media */
+
+@media (max-width: 768px) {
+  .portfolio-btn {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1439px) {
+  .portfolio-items {
+    justify-content: center;
+  }
+}
+
 /*   VIDEO   */
 
 .section-video {
@@ -492,7 +502,13 @@ h3 {
   cursor: pointer;
 }
 
-
+@media (max-width: 768px) {
+  .video-btn img {
+    width: 75px;
+    height: 75px;
+  }
+}
+ 
 /*   PRICE   */
 
 .section-price {
@@ -500,7 +516,7 @@ h3 {
 /*   TODO сделать универсальный отталкиватель h2
  */}
 
-.price-items {
+.price-wrapper {
   display: flex;
   justify-content: center;
   gap: 25px;
@@ -549,12 +565,19 @@ h3 {
   margin-bottom: 40px;
 }
 
+/* media price */
+
+@media (max-width: 800px) {
+  .price-wrapper {
+    flex-wrap: wrap;
+  }
+}
+
 /*   CONTACTS   */
 
 .section-contacts {
   margin-top: 100px;
   height: 700px;
-
 }
 
 .contacts-container {
@@ -623,6 +646,30 @@ textarea:focus, input:focus{
   margin-right: 230px;
 }
 
+/* contacts media */
+
+@media (max-width: 768px) {
+  .contacts-container {
+    background: url('../img/contacts-bg-tablet.jpg');
+    background-size: auto 600px;
+    background-repeat: no-repeat;
+  }
+  .section-contacts {
+    margin-top: 100px;
+    height: 600px;
+  }
+  .contacts-wrapper {
+    align-items: center;
+  }
+  .contacts-title {
+    padding-right: 0;
+  }
+  .section-contacts .button {
+    margin-right: 0;
+  }
+}
+
+
 /*   FOOTER   */
 
 footer {
@@ -650,4 +697,20 @@ footer {
 .footer-social-list li:hover {
   filter: invert(21%) sepia(13%) saturate(734%) hue-rotate(7deg) brightness(87%) contrast(89%);
   transition: .3s;
+}
+
+
+/* media footer */
+ 
+@media (max-width: 768px) {
+  footer {
+    padding-top: 28px;
+    height: 190px;
+  }
+  .footer-wrapper {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
 }
