@@ -266,6 +266,17 @@ a:hover {
   }
 }
 
+@media (max-width: 425px) {
+  .navigation {
+    margin-left: 0;
+    padding: 134px 0 0 80px;
+  }
+  .switch-lng span {
+    margin: 0;
+}
+}
+
+
 
 .header {
   background: url('../img/bg.png');
@@ -332,6 +343,18 @@ h1 {
     background: url('../img/bg-tablet.png');
     background-repeat: no-repeat;
     background-position: center -90px;
+  }
+}
+
+@media (max-width: 425px) {
+  .section-hero p {
+    padding-right: 350px;
+  }
+}
+
+@media (max-width: 320px) {
+  .section-hero p {
+    padding-right: 400px;
   }
 }
 
@@ -441,10 +464,8 @@ h3 {
   line-height: 22px;
   }
   .skills-item {
+    width: auto;
     margin-bottom: 67px;
-  }
-  .skills-item-wrapper {
-    
   }
 }
 
@@ -496,6 +517,20 @@ h3 {
 
 /* media porfolio  */
 
+@media (max-width: 425px) {
+  .portfolio-items img {
+    object-fit: cover;
+    height: 490px;
+  }
+}
+
+@media (max-width: 320px) {
+  .portfolio-items img {
+    object-fit: cover;
+    height: 360px;
+  }
+}
+
 @media (max-width: 768px) {
   .section-portfolio {
     padding-top: 103px;
@@ -513,6 +548,7 @@ h3 {
     justify-content: center;
   }
 }
+
 
 /*   VIDEO   */
 
@@ -539,11 +575,22 @@ h3 {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .section-video {
-    width: 647px;
-    height: 627px;
+@media (max-width: 425px) {
+  .video-player img {
+    object-fit: cover;
+    width: 430px;
   }
+}
+
+
+@media (max-width: 320px) {
+  .video-player img {
+    object-fit: cover;
+    width: 330px;
+  }
+}
+
+@media (max-width: 768px) {
   .section-video h2 {
     padding-bottom: 69px;
   }
@@ -612,6 +659,9 @@ h3 {
 /* media price */
 
 @media (max-width: 800px) {
+  .section-price {
+    padding-top: 87px;
+  }
   .section-price h2 {
     padding-bottom: 70px;
   }
@@ -624,6 +674,18 @@ h3 {
     Height: 505px;
   }
 }
+
+@media (max-width: 425px) {
+  .price-item {
+    padding: 0 30px 0 30px;
+  }
+
+.price-item:last-child  {
+  height: 540px;
+}
+
+}
+
 
 /*   CONTACTS   */
 
@@ -723,6 +785,11 @@ textarea:focus, input:focus{
   }
 }
 
+@media (max-width: 465px) {
+  .contacts-input {
+    width: 280px;
+  }
+}
 
 /*   FOOTER   */
 
@@ -777,4 +844,10 @@ footer {
   .footer-social {
     padding-top: 23px;
   }
+}
+
+@media (max-width: 340px) {
+ footer .container {
+  padding: 0 54px 0 50px;
+ }
 }
