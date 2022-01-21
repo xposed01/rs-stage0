@@ -28,3 +28,7 @@
   bodyBlackout.classList.remove('blackout-active');
   });
 }());
+
+console.log('Вёрстка соответствует макету. Ширина экрана 768px +48\n');
+console.log('Контент страницы сохраняется +15\nАдаптивное меню +22');
+console.log('Итог: 75 баллов');
