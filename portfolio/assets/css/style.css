@@ -438,7 +438,7 @@ h3 {
 
 /*  media skills */
 
-@media (max-width: 1243px) {
+@media (max-width: 1260px) {
 .section-title:after, .section-title:before {
   content: '';
   width: 115px; /* TODO пофиксить длину полосок */
@@ -464,12 +464,12 @@ h3 {
   line-height: 22px;
   }
   .skills-item {
-    width: auto;
+    /* width: auto; */
     margin-bottom: 67px;
   }
 }
 
-@media (max-width: 723px) {
+@media (max-width: 758px) {
   .skills-item {
     width: 100%;
     margin-bottom: 36px;
@@ -543,7 +543,7 @@ h3 {
   }
 }
 
-@media (max-width: 1439px) {
+@media (max-width: 1456px) {
   .portfolio-items {
     justify-content: center;
   }
