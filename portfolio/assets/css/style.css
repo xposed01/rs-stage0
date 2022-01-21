@@ -367,12 +367,12 @@ h1 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .skills-item {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+/*   display: flex;
+  flex-direction: column; */
   background-position: center top;
   background-repeat: no-repeat;
 }
@@ -430,10 +430,25 @@ h3 {
   .section-title {
   font-size: 32px;
   line-height: 40px;
+  padding-bottom: 65px;
 }
+  .skills-item h3 {
+    margin-top: 80px;
+    margin-bottom: 21px;
+  }
+  .skills-item p {
+  font-size: 18px;
+  line-height: 22px;
+  }
+  .skills-item {
+    margin-bottom: 67px;
+  }
+  .skills-item-wrapper {
+    
+  }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 723px) {
   .skills-item {
     width: 100%;
     margin-bottom: 36px;
@@ -479,9 +494,15 @@ h3 {
   gap: 25px;
 }
 
-/* porfolio media */
+/* media porfolio  */
 
 @media (max-width: 768px) {
+  .section-portfolio {
+    padding-top: 103px;
+  }
+  .section-portfolio .section-title {
+    padding-bottom: 72px;
+  }
   .portfolio-btn {
     flex-wrap: wrap;
   }
@@ -519,9 +540,16 @@ h3 {
 }
 
 @media (max-width: 768px) {
+  .section-video {
+    width: 647px;
+    height: 627px;
+  }
+  .section-video h2 {
+    padding-bottom: 69px;
+  }
   .video-btn img {
-    width: 75px;
-    height: 75px;
+    width: 65px;
+    height: 65px;
   }
 }
  
@@ -584,8 +612,16 @@ h3 {
 /* media price */
 
 @media (max-width: 800px) {
+  .section-price h2 {
+    padding-bottom: 70px;
+  }
   .price-wrapper {
     flex-wrap: wrap;
+    gap: 50px;
+  }
+  .price-item {
+    Width: 420px;
+    Height: 505px;
   }
 }
 
@@ -671,7 +707,7 @@ textarea:focus, input:focus{
     background-repeat: no-repeat;
   }
   .section-contacts {
-    margin-top: 100px;
+    margin-top: 80px;
     height: 600px;
   }
   .contacts-wrapper {
@@ -679,6 +715,8 @@ textarea:focus, input:focus{
   }
   .contacts-title {
     padding-right: 0;
+    font-size: 32px;
+    line-height: 64px;
   }
   .section-contacts .button {
     margin-right: 0;
@@ -720,7 +758,7 @@ footer {
  
 @media (max-width: 768px) {
   footer {
-    padding-top: 28px;
+    padding-top: 15px;
     height: 190px;
   }
   .footer-wrapper {
@@ -728,5 +766,15 @@ footer {
     flex-direction: column;
     align-items: center;
     margin: 0;
+  }
+  .footer-data + a{
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .footer-data span {
+    margin: 8px;
+  }
+  .footer-social {
+    padding-top: 23px;
   }
 }
