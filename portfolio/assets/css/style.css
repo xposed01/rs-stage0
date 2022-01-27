@@ -215,7 +215,7 @@ a:hover {
 
  /* media navigation */
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* TODO: пофиксить транзишн, выпад меню сверху, и меню на 620px */
   .navigation {
     position: fixed;
     width: 100%;
@@ -226,8 +226,9 @@ a:hover {
     z-index: 10;
     margin-left: 148px;
     padding: 134px 0 0 127px;
-    transform: translateX(100%); /* Сдвинул навигацию на 100% ее ширины */
-    transition: .3s all linear;
+    transform: translateX(100%);
+    transition: 0.3s; 
+    /* visibility: hidden; */ /* ?????????? */
   }
   .navigation-active {
     transform: translateX(0); /* Анимация выезда */
@@ -394,16 +395,15 @@ h1 {
 }
 
 .skills-item {
-/*   display: flex;
-  flex-direction: column; */
   background-position: center top;
   background-repeat: no-repeat;
+  max-width: 320px;
 }
 
 
 .skills-item:nth-child(1) {
   background-image: url('../svg/camera.svg');
-  background-size: 62px 50px;
+  background-size: 62px 50px; /* TODO пофиксить отображение ФОТО на RU */
 }
 
 .skills-item:nth-child(2) {
@@ -433,7 +433,8 @@ h3 {
   font-size: 18px;
   text-align: center;
   line-height: 36px;
-  margin: 0 20px 8px 20px;
+  min-width: 280px;
+  padding: 0 18px;
 }
 
 /*  media skills */

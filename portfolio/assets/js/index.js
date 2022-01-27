@@ -1,5 +1,28 @@
+import i18Obj from './translate.js';
 
-// burger-animation
+/* TRANSLATE */
+
+function getTranslate(lng) {
+  const data = document.querySelectorAll('[data-i18n]');
+  data.forEach(element => {
+      if (element.placeholder) {
+        element.placeholder = i18Obj[lng][element.dataset.i18n];
+        element.textContent = '';
+      } else {
+        element.textContent = i18Obj[lng][element.dataset.i18n];
+      }
+  });
+}
+
+const radioLngRU = document.querySelector('input[value="ru"]');
+const radioLngEN = document.querySelector('input[value="en"]');
+radioLngRU.addEventListener('click', () => getTranslate('ru'));
+radioLngEN.addEventListener('click', () => getTranslate('en'));
+
+
+
+
+/* MENU-ANIMATION */
 
 (function () {
   const burgerButton = document.querySelector('.menu-burger');
@@ -29,6 +52,4 @@
   });
 }());
 
-console.log('Вёрстка соответствует макету. Ширина экрана 768px +48\n');
-console.log('Контент страницы сохраняется +15\nАдаптивное меню +22');
-console.log('Итог: 75 баллов');
+
