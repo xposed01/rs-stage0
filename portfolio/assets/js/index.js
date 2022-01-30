@@ -1,10 +1,56 @@
 import i18Obj from './translate.js';
 
+/* PORTFOLIO IMG PRELOAD*/
+
+const seasonsPreload = ['winter', 'spring', 'summer', 'autumn'];
+
+(function preloadImages () {
+  seasonsPreload.forEach(function (element) {
+      for (let i = 1; i <= 6; i++) {
+        const img = new Image();
+        img.src = `./assets/img/${element}/${i}.jpg`;
+        /* console.log(img); */
+      }
+    });
+  }());
+
+
+/* ACTIVE BUTTON */
+
+const buttonsActive = document.querySelectorAll('.portfolio-btn');
+const buttonsActiveDelegate = document.querySelector('.portfolio-btns');
+
+buttonsActiveDelegate.addEventListener('click', (event) => {
+  if (event.target.closest('.portfolio-btn')) {
+    buttonsActive.forEach(element => {
+    element.classList.remove('button-active')
+    });
+    event.target.classList.add('button-active');
+  }
+})
+
+
+/* PORTFOLIO IMGs SWITCHER */
+
+const portfolioBtns = document.querySelector('.portfolio-btns');
+
+  portfolioBtns.addEventListener('click', (event) => {
+   const portfolioImages = document.querySelectorAll('.portfolio-img');
+   // Делегирование кнопок
+    if (event.target.closest('.portfolio-btn')) {
+      let dataSeason = event.target.dataset.season;
+   // Замена всех фото по выбору из кнопки
+      portfolioImages.forEach((img, index) => img.src = `./assets/img/${dataSeason}/${index + 1}.jpg`);
+    }
+  });
+
+
+
 /* TRANSLATE */
 
 function getTranslate(lng) {
-  const data = document.querySelectorAll('[data-i18n]');
-  data.forEach(element => {
+  const getLngData = document.querySelectorAll('[data-i18n]');
+  getLngData.forEach(element => {
       if (element.placeholder) {
         element.placeholder = i18Obj[lng][element.dataset.i18n];
         element.textContent = '';
@@ -14,10 +60,10 @@ function getTranslate(lng) {
   });
 }
 
-const radioLngRU = document.querySelector('input[value="ru"]');
-const radioLngEN = document.querySelector('input[value="en"]');
-radioLngRU.addEventListener('click', () => getTranslate('ru'));
-radioLngEN.addEventListener('click', () => getTranslate('en'));
+const radioLangueRu = document.querySelector('input[value="ru"]');
+const radioLangueEn = document.querySelector('input[value="en"]');
+radioLangueRu.addEventListener('click', () => getTranslate('ru'));
+radioLangueEn.addEventListener('click', () => getTranslate('en'));
 
 
 
