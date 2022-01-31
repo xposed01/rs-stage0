@@ -158,7 +158,7 @@ themeSwitcher.forEach(element => {
 
 // Функция смена темы
 
-const themeArray = document.querySelectorAll('.portfolio-btn, .section-title, .container-main ');
+const themeArray = document.querySelectorAll('.portfolio-btn, .section-title, .container-main, .navigation, .navigation-list, .menu-burger');
 
 function lightSwitcher () {
   themeArray.forEach(element => {
@@ -171,3 +171,11 @@ function lightSwitcher () {
     document.documentElement.style.setProperty('--main-color-h2', '#bdae82');
   }
 }
+
+
+
+console.log('Смена изображений в секции portfolio +25');
+console.log('Перевод страницы на два языка +25');
+console.log('Переключение светлой и тёмной темы +25');
+console.log('Дополнительный функционал: local storage +5');
+console.log('Итог: 80 баллов');
