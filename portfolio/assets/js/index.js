@@ -1,5 +1,33 @@
 import i18Obj from './translate.js';
 
+/* LOCAL STORAGE */
+
+let langueLocal = 'en';
+let themeLocal = 'dark';
+
+function setLocalStorage() {
+  localStorage.setItem('lang', langueLocal);
+  localStorage.setItem('theme', themeLocal);
+}
+window.addEventListener('beforeunload', setLocalStorage);
+
+function getLocalStorage() {
+  // storage lng
+  if(localStorage.getItem('lang')) {
+    const lang = localStorage.getItem('lang');
+    getTranslate(lang);
+  } // storage theme
+  if(localStorage.getItem('theme')) {
+    const theme = localStorage.getItem('theme');
+    if (theme == 'light') {
+      themeLocalSwitcher();
+    }
+  }
+}
+window.addEventListener('load', getLocalStorage)
+
+
+
 /* PORTFOLIO IMG PRELOAD*/
 
 const seasonsPreload = ['winter', 'spring', 'summer', 'autumn'];
@@ -58,14 +86,15 @@ function getTranslate(lng) {
         element.textContent = i18Obj[lng][element.dataset.i18n];
       }
   });
+  document.querySelector(`input[value=${lng}]`).checked = true;
+  langueLocal = lng;
+  console.log(`Язык изменен на ${langueLocal}`)
 }
 
 const radioLangueRu = document.querySelector('input[value="ru"]');
 const radioLangueEn = document.querySelector('input[value="en"]');
 radioLangueRu.addEventListener('click', () => getTranslate('ru'));
 radioLangueEn.addEventListener('click', () => getTranslate('en'));
-
-
 
 
 /* MENU-ANIMATION */
@@ -99,3 +128,46 @@ radioLangueEn.addEventListener('click', () => getTranslate('en'));
 }());
 
 
+/* THEME SWITCHER */
+
+
+// Работа кнопки и переключение темы 
+const themeSwitcherDark = document.querySelector('.switch-theme-dark')
+const themeSwitcherLight = document.querySelector('.switch-theme-light')
+const themeSwitcher = document.querySelectorAll('.switch-theme')
+
+function themeLocalSwitcher() {
+      lightSwitcher();
+      themeSwitcherDark.style.display = (themeSwitcherDark.style.display == 'none') ? 'block' : 'none';
+      themeSwitcherLight.style.display = (themeSwitcherLight.style.display == 'none') ? 'block' : 'none'
+      themeLocal = (themeLocal == 'dark') ? 'light' : 'dark';
+      console.log(`Тема изменена на ${themeLocal}`)
+}
+
+
+themeSwitcher.forEach(element => {
+  element.addEventListener('click', (event) => {
+    lightSwitcher();
+    themeSwitcherDark.style.display = (themeSwitcherDark.style.display == 'none') ? 'block' : 'none';
+    themeSwitcherLight.style.display = (themeSwitcherLight.style.display == 'none') ? 'block' : 'none'
+    themeLocal = (themeLocal == 'dark') ? 'light' : 'dark';
+    console.log(`Тема изменена на ${themeLocal}`)
+  });
+});
+
+
+// Функция смена темы
+
+const themeArray = document.querySelectorAll('.portfolio-btn, .section-title, .container-main ');
+
+function lightSwitcher () {
+  themeArray.forEach(element => {
+    element.classList.toggle('light-theme');
+  });
+  // фикс h2
+  if (themeLocal == 'dark') {
+    document.documentElement.style.setProperty('--main-color-h2', '#000')
+  } else {
+    document.documentElement.style.setProperty('--main-color-h2', '#bdae82');
+  }
+}

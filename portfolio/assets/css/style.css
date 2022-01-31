@@ -3,6 +3,7 @@
 
 :root {
   --main-color: #bdae82;
+  --main-color-h2: #bdae82;
 }
 
 *,
@@ -90,6 +91,12 @@ p {
   padding: 0 20px;
 }
 
+.container-main {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-bottom: 100px;
+}
 
 /*   HEAD   */
 
@@ -161,6 +168,7 @@ a:hover {
 .switch-lng input[type=radio]:checked + label {
   color: var(--main-color);
 }
+
 
 .menu-burger {
   display: none;
@@ -380,7 +388,7 @@ h1 {
   content: '';
   width: 275px; /* TODO пофиксить длину полосок */
   height: 2px;
-  background: var(--main-color);
+  background: var(--main-color-h2);
   margin: 0 20px;
 }
 
@@ -705,7 +713,6 @@ h3 {
 /*   CONTACTS   */
 
 .section-contacts {
-  margin-top: 100px;
   height: 700px;
 }
 
@@ -864,4 +871,40 @@ footer {
  footer .container {
   padding: 0 54px 0 50px;
  }
+}
+
+
+
+/* THEME */
+
+.switch-theme {
+  width: 45px;
+  height: 45px;
+  margin: 3px 0 0 30px;
+  cursor: pointer;
+  display: inline;
+}
+
+.switch-theme:hover {
+  filter: invert(21%) sepia(13%) saturate(734%) hue-rotate(7deg) brightness(87%) contrast(89%);
+  transition: .3s;
+}
+
+.light-theme {
+  background-color: #fff;
+  color: #000;
+}
+
+.light-theme:hover {
+  color: #000;
+}
+
+.light-theme.button-alt:hover {
+  background-color: #bdae82;
+  color: #fff;
+}
+
+.light-theme.button-active {
+  background-color: #bdae82;
+  color: #fff;
 }
