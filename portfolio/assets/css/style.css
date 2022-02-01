@@ -317,7 +317,7 @@ a:hover {
 }
 
 .header {
-  background: url('../img/bg.png');
+  background: url('../img/bg.jpg');
   background-repeat: no-repeat;
   background-position: center 0;
 }
@@ -325,7 +325,7 @@ a:hover {
 /*   MAIN HERO   */
 
 .container-bg {
-  background: url('../img/bg.png');
+  background: url('../img/bg.jpg');
   background-repeat: no-repeat;
   background-position: center -90px;
 }
@@ -376,11 +376,11 @@ h1 {
     width: 650px;
   }
   .header {
-    background: url('../img/bg-tablet.png');
+    background: url('../img/bg-tablet.jpg');
     background-position: center 0;
     }
   .container-bg {
-    background: url('../img/bg-tablet.png');
+    background: url('../img/bg-tablet.jpg');
     background-repeat: no-repeat;
     background-position: center -90px;
   }
