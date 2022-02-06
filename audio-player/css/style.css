@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* GLOBAL */
+
+body {
+  background-color: rgb(123, 133, 153);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+
+.container-player {
+  background-color: rgb(110, 110, 110);
+  position: absolute;
+  height: 401px;
+  width: 334px;
+  border-radius: 3%;
+  overflow: hidden;
+  box-shadow: 0 5px 13px rgba(0, 0, 0, 0.15);
+}
+
+.cover {
+  width: 105%;
+  object-fit: cover;
+
+}
+
+.player-panel {
+  background-color: rgb(155, 155, 155);
+  position: absolute;
+  height: 133px;
+  width: 100%;
+  z-index: 10;
+  bottom: 0;
+  padding-top: 17px;
+  padding-left: 29px;
+  padding-right: 36px;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.progress-bar {
+  background-color: black;
+  width: 215px;
+  height: 5px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.progress-bar .progress-status {
+  height: inherit;
+  width: 40%;
+  border-radius: inherit;
+  position: relative;
+  background-color: blue;
+}
+
+.progress-status::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 10px;
+  background-color: inherit;
+  border-radius: inherit;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.progress-bar:hover .progress-status::before {
+  opacity: 1;
+}
