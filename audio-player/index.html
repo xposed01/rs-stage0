@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/svg/favicon.ico">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>MP3 Player</title>
+</head>
+<body>
+  <audio src="assets/audio/song-1.mp3" id="mainAudio"></audio>
+<div class="container-player">
+    <img src="assets/img/cover-1.jpg" class="cover" alt="cover" width="334" height="331">
+    <div class="player-panel">
+      <p class="artist">The Neighbourhood</p>
+      <p class="title">Dust</p>
+      <div class="buttons">
+        <img src="assets/svg/play.png" id="play" class="btn" width="30" height="30">
+        <img src="assets/svg/backward.png" id="backward" class="btn" width="30" height="30">
+        <img src="assets/svg/forward.png" id="forward" class="btn" width="30" height="30">
+      </div>
+      <div class="progress-bar">
+        <div class="progress-status"></div>
+      </div>
+      <span class="current-time">0:00</span>
+      <span class="total-duration">3:28</span>
+    </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

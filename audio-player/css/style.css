@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* GLOBAL */
+
+body {
+  background-color: rgb(223, 223, 223);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+
+.container-player {
+  background-color: rgb(110, 110, 110);
+  position: absolute;
+  height: 401px;
+  width: 334px;
+  border-radius: 3%;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.30);
+}
+
+.cover {
+  width: 105%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: .9s;
+}
+
+.player-panel {
+  background-color: rgb(245, 245, 245);
+  position: absolute;
+  height: 133px;
+  width: 100%;
+  z-index: 10;
+  bottom: 0;
+  padding-top: 15px;
+  padding-left: 29px;
+  padding-right: 36px;
+}
+
+.btn {
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+
+
+.progress-bar {
+  margin-top: 5px;
+  background-color: rgb(173, 173, 173);
+  width: 275px;
+  height: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 7px;
+}
+
+.progress-bar .progress-status {
+  height: inherit;
+  width: 0;
+  border-radius: inherit;
+  position: relative;
+  background: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+}
+
+.progress-status::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: inherit;
+  border-radius: inherit;
+  top: 50%;
+  right: 0;
+  left: 99%;
+  transform: translate(0, -50%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.progress-bar:hover .progress-status::before {
+  opacity: 1;
+}
+
+.total-duration {
+  position: absolute;
+  right: 30px;
+}
+
