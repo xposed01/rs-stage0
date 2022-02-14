@@ -9,7 +9,7 @@ function getRandom(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// bacground animation
+// background animation
 function backgroundAnimation() {
   body.style.backgroundImage = `linear-gradient(${getRandom(0, 555)}deg, #add1e9 0%, #b3b5df 100%)`;
 }
