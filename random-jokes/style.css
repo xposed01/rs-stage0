@@ -63,7 +63,7 @@ p {
 @media (max-width: 425px) {
   p {
     width: 300px;
-    height: 100px;
+    height: 200px;
     text-align: center;
     font-size: 20px;
   }
